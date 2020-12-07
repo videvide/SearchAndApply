@@ -1,0 +1,69 @@
+
+MAIL:
+
+$x("//a[contains(text(), '@')]/text()")
+response.xpath("//a[contains(@href, 'mailto')]/@href").getall():
+response.xpath("//a[contains(@href, 'mailto')]/text()").getall():
+
+# kollar om adressen inehåller både 'info' och '@'
+response.xpath('//*[contains(text(), "@") + contains(text(), "@")]/text()')
+
+
+ACADEMIC WORK:
+
+länkar till annonser = response.xpath('//div[@class="list-job-body"]/a/@href').getall()
+annons-id = response.xpath('//div[@class="jobbid"]/text()').get()
+jobbtiteln = response.xpath('//h1/text()').get()
+aw_kontakt_mening = response.xpath('//div[@class="consultant-text"]/p/text()').get()
+aw-kontakt-mail = response.xpath('//a[contains(@href, "mailto")]/text()').get()
+snabbfakta = response.xpath('//div[@class="hidden-xs"]/div[@class="quickinfo"]/dl/dd/text()').getall()
+		
+
+PLATSBANKEN: 
+
+_ange både ref och an-id.
+
+
+länkar till annonser = response.xpath('//a[@class="ng-star-inserted"]/@href').getall()
+--- ANNONS TITEL ---
+response.xpath('//pb-section-job-quick-info/h1/text()').getall()
+
+--- ANNONS ID ---
+response.xpath('//pb-section-job-about/div/h2[1]/text()').getall()
+
+--- REFERENS ---
+response.xpath('//pb-section-job-apply-component/div/div/div[2]/div[1]/strong/text()').getall()
+
+--- ARBETSGIVARE ---
+response.xpath('//pb-section-job-quick-info/h2/text()').getall()
+
+--- JOBB TITEL ---
+response.xpath('//h3[@id="pb-job-role"]/text()').getall()
+
+--- PLATS ---
+response.xpath('//h3[@id="pb-job-location"]/text()').getall()
+
+--- EXTRA INFO ---
+response.xpath('//pb-section-job-quick-info/div/div/span/text()').getall()
+
+--- KONTAKT NAMN ---
+response.xpath('//pb-section-job-contact/div/div/ul/li/div[2]/div[1]/text()').getall()
+
+--- KONTAKT EMAIL ---
+response.xpath('//pb-section-job-contact/div/div/ul/li/div/div/a/@href').getall()
+
+--- ANSÖK MAIL ---
+response.xpath('//pb-section-job-apply-component/div/div/div[2]/div[2]/div/div/span/a/@href').getall()
+
+--- ANSÖK LÄNK ---
+response.xpath('//div[@class="application-info"]/div/a/@href').getall()
+
+--- WILDCARD MAIL ---
+response.xpath('//a[contains(@href, "mailto")]/@href').get()
+
+--- EXTERN EMAIL ---
+response.xpath('//a[contains(@href, "mailto")]/@href').getall()
+
+response.xpath('//*[contains(text(), "@") + contains(text(), "@")]/text()').getall()
+
+

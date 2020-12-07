@@ -1,0 +1,5 @@
+sudo docker run -it -p 8050:8050 scrapinghub/splash --disable-private-mode
+
+scrapy shell 'http://localhost:8050/render.html?url=https://arbetsformedlingen.se/platsbanken/annonser?p=4:apaJ_2ja_LuF&wait=10'
+
+scrapy crawl af -s JOBDIR=crawls/af-1 -o af.jl 

@@ -1,0 +1,4 @@
+IF YOU GET THE ERROR OF URL SHOULD BE UNICODE.. BUT THIS IN REQUEST FILE LINE 41:
+        if url is None:
+            url = 'about:blank'
+        url = url

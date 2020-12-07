@@ -1,0 +1,50 @@
+https://stackoverflow.com/questions/15830290/remove-duplicates-from-text-file
+https://stackoverflow.com/questions/43447221/removing-all-spaces-in-text-file-with-python-3-x
+https://stackoverflow.com/questions/28385337/python-open-a-file-search-then-append-if-not-exist
+
+
+# SCRIPT THAT CLEANS EXISTING FILE AND WRITES IT TO NEW FILE:
+>>> new = set()
+>>> with open('file_path', 'r') as fr, open('file_path', 'a+') as to:
+...     for olink in fr:
+...             new.add(olink)
+...     for nlink in new:
+...             to.write(nlink)
+
+
+# SCRIPT THAT FIRST 'CLEANS' OLD FILE, THEN CHECKS FOR UNIQUENESS IN NEW FILE, AND IF TRUE APPENDS:
+>>> old = set()
+>>> new = set()
+>>> with open('file_path', 'r') as fr, open('file_path', 'r+') as to:
+...     for olink in to:
+...             old.add(olink)
+...     for nlink in fr:
+...             new.add(nlink)
+...     for alink in new:
+...             if alink not in old:
+...                     to.write(alink)
+
+
+# SCRIPT TO CLEAN 'MAILTO:' WITH:
+>>> with open('mails.txt', 'r') as f, open('newmails.txt', 'a+') as t:
+...     for mail in f:
+...             nmail = mail.replace('mailto:', '')
+...             t.write(nmail)
+
+
+# SCRIPT TO CLEAN AWAY THE SUBJECT PART OF MAILTO LINK:
+>>> mail = 'mailto:linda@example.se?subject=Referens:EPM'
+>>> mail_split = flow.split('?', 1)
+>>> clean_mail = yes[0]
+>>> clean_mail
+'mailto:linda@example.se' # glöm inte ta bort mailto!!!
+
+
+# SCRIPT THAT CHECKS FOR 'UNIQUENESS' IN FILE AND IF NOT THERE, APPENDS IT:
+	with open("links.txt", "a+") as f:
+    		for line in f:
+        		if link is not in line:	
+    	    		f.write(link)
+    	    		
+    	    		
+

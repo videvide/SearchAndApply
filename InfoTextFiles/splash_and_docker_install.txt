@@ -1,0 +1,5 @@
+https://linuxhint.com/install_configure_docker_ubuntu/
+
+https://splash.readthedocs.io/en/stable/install.html
+
+https://github.com/scrapy-plugins/scrapy-splash
