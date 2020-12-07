@@ -1,4 +1,5 @@
 # Semi-automatic job-applier. Crawls, Scrapes, Cleans and Sends.
+https://docs.scrapy.org/en/latest/
 
 https://linuxhint.com/install_configure_docker_ubuntu/
 
